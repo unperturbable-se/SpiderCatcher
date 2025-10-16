@@ -1,4 +1,3 @@
-````markdown
 # 🕷️ SpiderCatcher
 
 **SpiderCatcher** is a fast-paced **2D arcade-style game** built with **C++** and **SFML (Simple and Fast Multimedia Library)**.
@@ -133,4 +132,3 @@ You’re free to use, modify, and distribute it with attribution.
 ## ⭐ Support
 
 If you enjoyed this project, consider giving it a ⭐ on GitHub — it helps others discover it too!
-````
