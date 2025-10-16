@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.10)
+project(randomGame)
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(SFML_DIR "") //insert the path
+set(SFML_INCLUDE_DIR "${SFML_DIR}/include")
+set(SFML_LIBRARY_DIR "${SFML_DIR}/lib")
+
+include_directories(${SFML_INCLUDE_DIR})
+link_directories(${SFML_LIBRARY_DIR})
+
+add_executable(SpiderCatcher WIN32 main.cpp)
+
+target_link_libraries(SpiderCatcher
+    sfml-graphics
+    sfml-window
+    sfml-audio
+    sfml-system
+)
+
+# --- Copy SFML DLLs after build (for Windows) ---
+if (WIN32)
+    add_custom_command(TARGET SpiderCatcher POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${SFML_DIR}/bin" $<TARGET_FILE_DIR:SpiderCatcher>)
+endif()
