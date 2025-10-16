@@ -9,6 +9,7 @@
 #include "score.h"
 #include <iostream>
 
+
 sf::Vector2u screenSize{1000,1000};
 int getWindowInput()
 {
